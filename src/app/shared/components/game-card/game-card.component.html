@@ -8,15 +8,14 @@
     </div>
     <div class="filler"></div>
     <div class="btn-menu">
-        <div *ngIf="game.promotion" class="prom-chip align-vertical">
+        <div *ngIf="game.promotion && !game.inCart && !game.owned" class="prom-chip align-vertical">
             <p style="padding: 0 2px">-{{game.promotion}}%</p>
         </div>
-        <div class="align-vertical">
-            <div *ngIf="game.promotion" class="old-price">${{game.oldPrice}}</div>
-            <div [class.disabled]="game.owned">${{game.price}}</div>
+        <div *ngIf="game.promotion && !game.inCart && !game.owned" class="align-vertical">
+            <div class="old-price">${{game.oldPrice}}</div>
         </div>
         <button *ngIf="game.owned" mat-flat-button disabled>OWNED</button>
         <button *ngIf="game.inCart" mat-button class="btn-black">IN CART</button>
-        <button *ngIf="!game.inCart && !game.owned" mat-flat-button class="btn-add" (click)="add()">ADD</button>
+        <button *ngIf="!game.inCart && !game.owned" mat-flat-button class="btn-add" (click)="add()">${{game.price}}</button>
     </div>
 </div>
