@@ -1,0 +1,64 @@
+
+  .btn-add {
+    color: white;
+    background-color: #02ac1e;
+  }
+
+  .promo-btn {
+    color: white;
+    background-color: #6a5;
+  }
+
+  button {
+    margin: 0 2px;
+  }
+
+  .prom-chip {
+    border-radius: 5px;
+    color: white;
+    background: green;
+    margin: 0 1px;
+    font-weight: 200;
+    cursor: pointer;
+    height: 35px
+  }
+
+  .old-price {
+    font-size: x-small;
+    text-decoration: line-through;
+  }
+
+  .align-vertical > div {
+    margin: 0 1px;
+  }
+
+  .btn-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px
+  }
+
+  .col-container {
+    display: flex;
+  flex-direction: column;
+  height: 230px;
+  width: 230px;
+  background: #e1e1e1
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .filler {
+    flex-grow: 1; 
+  }
+
+  .disabled {
+    color:gray
+  }
+
+  .btn-black {
+    background: black;
+    color: white
+  }

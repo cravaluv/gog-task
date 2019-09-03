@@ -1,0 +1,13 @@
+<div class="flex-container-row" (mouseenter)="showRemove = true" (mouseleave)="showRemove = false">
+    <div class="card-item-col align-vertical img-container">
+        <img class="image-size" [src]="item.img">
+    </div>
+    <div class="card-item-col  align-vertical">
+        <span class="title">{{item.title | uppercase}}
+            <div *ngIf="showRemove"><p class="remover" (click)="remove()">Remove</p></div>
+        </span>
+    </div>
+    <div class="card-item-col price align-vertical">
+        ${{item.price}}
+    </div>
+</div>

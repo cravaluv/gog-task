@@ -1,0 +1,25 @@
+.image-size {
+    max-width: 100%;
+    max-height: 100%;
+}
+.img-container {
+    width: 40%
+}
+.price {
+    color: #6e6e6e
+}
+
+.title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 190px;
+}
+
+.remover {
+    text-decoration: underline;
+    color: #8c8c8c;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}

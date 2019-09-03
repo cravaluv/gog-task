@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+body {
+    background-color: #c2c2c2;
+    margin: 0 0 !important;
+    font-weight: 600;
+    color: #262626;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+
+
+
+.flex-container-row {
+    display:flex;
+    flex-direction:row;
+    width: 400px;
+    justify-content: space-between;
+  }
+
+  
+.align-vertical {
+    display:flex;
+  align-items:center;
+  }
+  
+
+  .flex-filelr {
+    flex: 1 1 auto;
+  }

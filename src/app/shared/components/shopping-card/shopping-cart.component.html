@@ -1,0 +1,33 @@
+<div class="dropdown">
+  <button mat-button [class.active]="showCart" (click)="showCart = !showCart" class="cart-btn">
+    <mat-icon fontSet="fas" fontIcon="fa-shopping-cart">{{shoppingCart.items.length }}</mat-icon>
+  </button>
+  <div class="dropdown-content" [ngClass]="{'visible': !showCart}">
+    <div *ngIf="shoppingCart.items.length == 0">
+      <div class="align-center">
+        <mat-icon fontSet="fas" fontIcon="fa-cart-plus" class="cart-icon"></mat-icon>
+      </div>
+      <div class="align-center cart-text">
+        I am empty. Make your dreams come true.
+      </div>
+    </div>
+    <div *ngIf="shoppingCart.items.length > 0">
+      <div class="flex-container-row">
+        <div class="flex-item align-vertical">
+         {{shoppingCart.items.length }} ITEMS IN CART
+        </div>
+        <span></span>
+        <div class="flex-item align-vertical">
+          ${{shoppingCart.totalPrice | number : '1.2-2'}}
+        </div>
+        <div class="flex-item">
+          <button mat-flat-button class="clear-btn" (click)="clear()">CLEAR CART</button>
+        </div>
+      </div>
+      <div *ngFor="let item of shoppingCart.items">
+          <mat-divider></mat-divider>
+          <app-shopping-cart-item [item]="item" (removeItem)="removeItem.emit($event)"></app-shopping-cart-item>
+      </div>
+    </div>
+  </div>
+</div>

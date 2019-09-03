@@ -1,0 +1,22 @@
+<div class="col-container">
+    <div>
+        <img mat-card-image [src]="game.img">
+
+    </div>
+    <div [class.disabled]="game.owned">
+        {{game.title  | uppercase}}
+    </div>
+    <div class="filler"></div>
+    <div class="btn-menu">
+        <div *ngIf="game.promotion" class="prom-chip align-vertical">
+            <p style="padding: 0 2px">-{{game.promotion}}%</p>
+        </div>
+        <div class="align-vertical">
+            <div *ngIf="game.promotion" class="old-price">${{game.oldPrice}}</div>
+            <div [class.disabled]="game.owned">${{game.price}}</div>
+        </div>
+        <button *ngIf="game.owned" mat-flat-button disabled>OWNED</button>
+        <button *ngIf="game.inCart" mat-button class="btn-black">IN CART</button>
+        <button *ngIf="!game.inCart && !game.owned" mat-flat-button class="btn-add" (click)="add()">ADD</button>
+    </div>
+</div>
